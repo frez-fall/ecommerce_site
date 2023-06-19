@@ -3,7 +3,6 @@ import {
   ProductCategoriesContainer,
 } from "../utils/product-interface";
 import close from "../assets/icons/Delete.svg";
-import "../styles/filter.css";
 import { useEffect, useRef } from "react";
 
 interface FilterProps {

@@ -1,4 +1,3 @@
-import "../styles/productmenu.css";
 import arrow from "../assets/icons/Arrow.svg";
 import dropDownImg from "../assets/images/Desktop/Dropdown image.png";
 import {

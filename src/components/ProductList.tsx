@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import Filter from "./Filter";
-import "../styles/productpage.css";
 import ProductCard from "./ProductCard";
 import { productCategories } from "../utils/product-categories";
 import { products, images } from "../utils/product-data.json";

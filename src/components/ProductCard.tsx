@@ -1,4 +1,3 @@
-import "../styles/productcard.css";
 import { ProductInfo, Images } from "../utils/product-interface";
 
 interface ProductCardProps {

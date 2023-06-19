@@ -4,8 +4,6 @@ import {
   navigationItems,
 } from "../utils/navigation-list";
 
-import "../styles/navmenu.css";
-
 import arrow from "../assets/icons/Arrow.svg";
 
 const Menu = () => {

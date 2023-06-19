@@ -1,4 +1,3 @@
-import "../styles/footer.css";
 import brandLogo from "../assets/icons/brandlogo.svg";
 import facebook from "../assets/icons/Facebook.svg";
 import twitter from "../assets/icons/Twitter.svg";
