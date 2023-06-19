@@ -1,0 +1,113 @@
+@import url(./fonts.css);
+
+:root{
+  --text-color:#221F17;
+  --background-color: #FCFCFC;
+}
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  overflow-x: hidden;
+  background-color:var(--background-color) !important;
+}
+
+ul{
+  padding:0 !important;
+}
+
+h2,h3,h5,h6, .secondary-text, p{
+  color: var(--text-color);
+}
+
+h2{
+  font-family: Argue DEMO;
+  font-size: 2.5rem;
+}
+
+h3{
+  font-family: Poppins Regular;
+  font-size: 1.875rem;
+  text-transform: uppercase;
+}
+
+h4{
+  font-family: Poppins Regular;
+  font-size: 1.5625rem;
+  text-transform: uppercase;
+}
+
+h5{
+  font-family: Poppins Medium;
+  font-size: 1.25rem;
+  margin: 0 !important;
+}
+
+h6{
+  font-size: 1.125ren;
+  font-family: Poppins Medium;
+  text-transform:uppercase;
+  padding:0;
+  line-height: auto;
+}
+
+p{
+  font-family: Poppins Regular;
+  font-size: 1.125rem;
+  margin:0 !important;
+}
+
+.secondary-text{
+  font-family: Poppins Regular;
+  font-size: 1rem;
+  cursor: pointer;
+  margin:0;
+}
+
+.button{
+  padding:8px ;
+  font-family: Poppins Medium;
+  letter-spacing: 0.1em;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 5px;
+}
+
+.button.links{
+  background-color: #E5DDDD;
+  border-radius: 100px;
+  width: 10rem;
+}
+
+.secondary.button, .primary.button:hover{
+  background-color: transparent;
+  border: 1px solid #221F17;
+  color: #221F17;
+}
+
+.primary.button, .secondary.button:hover{
+  background-color: #221F17;
+  color:#FCFCFC
+}
+
+.mb.icon{
+  width: 20px;
+  aspect-ratio: 1/1;
+  /* display: none; */
+}
+
+.icon{
+  width: 24px;
+  aspect-ratio: 1/1;
+}
+
+.text-icon{
+  width: 15px;
+  aspect-ratio: 1/1;
+  margin-right: 0.5rem;
+}

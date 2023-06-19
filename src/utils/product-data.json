@@ -1,0 +1,125 @@
+{
+    "images":{
+        "bottle" : "/src/assets/images/Products/bottle.jpg",
+        "serum" : "/src/assets/images/Products/drop.jpg",
+        "foam" : "/src/assets/images/Products/foam.jpg",
+        "cream" : "/src/assets/images/Products/night cream.jpg",
+        "pump" : "/src/assets/images/Products/pump.jpg",
+        "soap" : "/src/assets/images/Products/soap.jpg",
+        "spray" : "/src/assets/images/Products/spray.jpg",
+        "tube" : "/src/assets/images/Products/tube-big.jpg",
+        "creamTube" : "/src/assets/images/Products/tube-small.jpg"
+    },
+    "sustainability" : {
+        "id": 1,
+        "info": "At Fleur, sustainability is at the heart of our skincare line. We ethically source our ingredients, prioritize eco-friendly packaging, and are proud to be a cruelty-free brand. We believe in taking care of your skin while being mindful of our impact on the environment."
+    },
+    "products":[
+        {
+          "id": 1,
+          "name": "Age Defy Face Wash",
+          "size": 250,
+          "price": 500,
+          "skinType": "aging",
+          "productType": "face-wash",
+          "desc": "Formulated to address the unique needs of mature skin, it gently cleanses the skin while targeting signs of aging such as fine lines, wrinkles, and dullness. Infused with powerful anti-aging ingredients, it helps rejuvenate and restore your skin's youthful appearance.",
+          "ingredients": [
+            "Hyaluronic Acid",
+            "Vitamin C",
+            "Retinol",
+            "Aloe Vera",
+            "Green Tea Extract",
+            "Jojoba Oil"
+          ],
+          "benefits": [
+            "Deeply cleanses the skin without stripping away essential moisture.",
+            "Reduces the appearance of fine lines and wrinkles.",
+            "Improves skin elasticity and firmness.",
+            "Enhances skin radiance and promotes a more youthful complexion.",
+            "Provides a refreshing and revitalizing sensation"
+          ],
+          "sustainabilityId": 1,
+          "imageUrl": "tube"
+        },
+        {
+          "id": 2,
+          "name": "Age Defy Serum",
+          "size": 30,
+          "price": 800,
+          "skinType": "aging",
+          "productType": "serum",
+          "desc": "A concentrated treatment designed to target and combat the visible signs of aging, the Age Defy serum delivers potent ingredients deep into the skin, providing intensive hydration, firming, and rejuvenation. With regular use, it helps restore a more youthful and radiant complexion.",
+          "ingredients": [
+            "Peptides",
+            "Niacinamide",
+            "Coenzyme Q10",
+            "Vitamin E",
+            "Squalane",
+            "Ginseng Extract"
+          ],
+          "benefits": [
+            "Reduces the appearance of wrinkles and fine lines.",
+            "Improves skin firmness and elasticity.",
+            "Hydrates and plumps the skin for a smoother texture.",
+            "Evens out skin tone and promotes a brighter complexion.",
+            "Provides a lightweight and easily absorbed formula."
+          ],
+          "sustainabilityId": 1,
+          "imageUrl": "serum"
+        },
+        {
+          "id": 3,
+          "name": "Age Defy Moisturizer",
+          "size": 100,
+          "price": 800,
+          "skinType": "aging",
+          "productType": "moisturizer",
+          "desc": "The Age Defy Moisturizer is a luxurious and nourishing cream that addresses the specific needs of mature skin. It provides intense hydration while targeting the signs of aging, helping to reduce the appearance of wrinkles, fine lines, and age spots. It leaves your skin feeling soft, smooth, and rejuvenated.",
+          "ingredients": [
+            "Hyaluronic Acid",
+            "Peptides",
+            "Shea Butter",
+            "Vitamin A",
+            "Licorice Extract",
+            "Chamomile Extract"
+          ],
+          "benefits": [
+            "Deeply hydrates and nourishes the skin.",
+            "Reduces the appearance of wrinkles and fine lines.",
+            "Restores skin elasticity and firmness.",
+            "Evens out skin tone and fades age spots.",
+            "Provides a rich and emollient texture."
+          ],
+          "sustainabilityId": 1,
+          "imageUrl": "cream"
+        },
+        {
+          "id": 4,
+          "name": "Age Defy Eye Cream",
+          "size": 30,
+          "price": 600,
+          "skinType": "aging",
+          "productType": "eye-cream",
+          "desc": "Revitalize your delicate eye area with our Age-Defying Eye Cream. Specially formulated for aging skin, this luxurious cream nourishes and hydrates, helping to reduce the appearance of fine lines, wrinkles, and crow's feet. Experience a smoother, firmer, and more youthful-looking eye contour with our advanced formula.",
+          "ingredients": [
+            "Hyaluronic Acid",
+            "Peptides",
+            "Retinol",
+            "Vitamin C",
+            "Antioxidants"
+          ],
+          "benefits": [
+            "Minimizes the appearance of fine lines, wrinkles, and crow's feet.",
+            "Hydrates and moisturizes the delicate skin around the eyes.",
+            "Improves skin elasticity and firmness.",
+            "Reduces puffiness and dark circles for a refreshed look.",
+            "Promotes a more youthful and vibrant eye contour."
+          ],
+          "sustainabilityId": 1,
+          "imageUrl": "creamTube"
+        }
+      ]
+
+
+}
+
