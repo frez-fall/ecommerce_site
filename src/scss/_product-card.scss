@@ -1,0 +1,49 @@
+@import './config.scss';
+
+.product-card{
+    @include flexbox(column, flex-start, flex-start);
+    aspect-ratio: 3/4;
+    border: 1px solid $accent-color;
+    border-radius: 10px;
+    background-color: white;
+    width: 100%;
+    text-decoration: none;
+    flex: 0 0 calc(50% - 1rem);
+    @media screen and (min-width: map-get($breakpoints, sm)) {
+        flex: 0 0 calc(33.33% - 1rem);
+    }
+    
+}
+
+.card-img img{
+    width: 100%;
+    object-fit:contain;
+    aspect-ratio: 3/4;
+}
+
+.card-details{
+    @include flexbox(column, space-between, flex-start);
+    width: 100%;
+    padding: 0 12px;
+    @media screen and (min-width: map-get($breakpoints, sm)) {
+        flex-direction: row;
+    }
+    div:first-child{
+        flex: 1;
+        @include flexbox(column, flex-start, stretch);
+        gap:0;
+        @media screen and (min-width: map-get($breakpoints, sm)) {
+            gap:8px;
+        }
+        .card-name{
+            font-family: Poppins Medium;
+        }
+    }
+    .card-price{
+        width: fit-content;
+    }
+
+}
+
+
+

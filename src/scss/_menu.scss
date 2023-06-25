@@ -1,0 +1,63 @@
+@import './config';
+
+
+.nav-menu{
+    @include flexbox(row, flex-start, center);
+    gap: 0.5rem;
+    position: sticky;
+    bottom: 0;
+    background-color: $secondary-color;
+    box-shadow: 0px -4px 4px rgba(34, 31, 23, 0.20);
+    @media screen and (min-width:map-get($breakpoints, lg)) {
+        display: block;
+        gap:0;
+        position: relative;
+        box-shadow: none;
+        .text-icon{
+            margin-right: 0.5rem;
+        }
+    }
+}
+
+.nav-list{
+    @include flexbox(row, space-between, center);
+    gap:1rem;
+    width: 100%;
+    margin: 16px;
+    padding: 0;
+    list-style: none;
+    @media screen and (min-width: map-get($breakpoints, lg)) {
+        gap:1.5rem;
+        justify-content: flex-start;    
+        width: fit-content;
+        margin: 0;
+    }
+}
+  
+.nav-item{
+    display: flex;
+    .nav-link{
+        text-decoration: none;
+        &:hover{
+            color:$primary-color;
+        }
+        &.mb-hide{
+            display: none;
+            @media screen and (min-width:map-get($breakpoints, lg)) {
+                display: block;
+            }
+          }
+      }
+    .icon-container .nav-icon{
+        display: block;
+        width: 1.8rem;
+        height: auto;
+        @media screen and (min-width:map-get($breakpoints, sm)) {
+            width: 2rem;
+        }
+    
+        @media screen and (min-width:map-get($breakpoints, lg)) {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,145 @@
+@import './config';
+@import './navbar';
+
+body{
+    overflow-x: hidden;
+    background-color: $secondary-color !important;
+  }
+  
+  ul{
+    padding:0 !important;
+  }
+  
+  h2,h3,h5,h6, .secondary-text, p{
+    color: $primary-color;
+  }
+  
+  h1, h2{
+    font-family: Argue DEMO;
+  }
+
+  h1{
+    font-size:font-size(mobile, h1);
+    @media screen and (min-width: map-get($breakpoints, md)) {
+        font-size:font-size(desktop, h1);
+    }
+  }
+
+  h2{
+    font-size:font-size(mobile, h2);
+    @media screen and (min-width: map-get($breakpoints, md)) {
+        font-size:font-size(desktop, h2);
+    }
+  }
+  
+
+  h3,h4,p, .secondary-text{
+    font-family: Poppins Regular;
+  }
+
+  h3, h4, h6, .button{
+    text-transform: uppercase;
+  }
+
+  h3{
+    font-size:font-size(mobile, h3);
+    @media screen and (min-width: map-get($breakpoints, md)) {
+        font-size:font-size(desktop, h3);
+    }
+  }
+  
+  h4{
+    font-size:font-size(mobile, h4);
+    @media screen and (min-width: map-get($breakpoints, md)) {
+        font-size:font-size(desktop, h4);
+    }
+  }
+  
+  h5,h6, .button{
+    font-family: Poppins Medium;
+  }
+
+  h5{
+    font-size:font-size(mobile, h4);
+    @media screen and (min-width: map-get($breakpoints, md)) {
+        font-size:font-size(desktop, h5);
+    }
+    margin: 0 !important;
+  }
+  
+  h6{
+    font-size:font-size(mobile, h1);
+    @media screen and (min-width: map-get($breakpoints, md)) {
+        font-size:font-size(desktop, h6);
+    }
+    padding:0;
+    line-height: auto;
+  }
+  
+  p:not([class*="secondary-text"]){
+    font-size:font-size(mobile, paragraph);
+    @media screen and (min-width: map-get($breakpoints, md)) {
+        font-size:font-size(desktop, paragraph);
+    }
+  }
+  
+  .secondary-text{
+    font-size:font-size(mobile, secondary-text);
+    cursor: pointer;
+    @media screen and (min-width: map-get($breakpoints, md)) {
+        font-size:font-size(desktop, secondary-text);
+    }
+  }
+  
+  .button{
+    padding:8px ;
+    letter-spacing: 0.1em;
+    font-size:font-size(mobile, input-text);
+   @media screen and (min-width: map-get($breakpoints, md)) {
+        font-size:font-size(desktop, input-text);
+    }
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .button.links{
+    background-color: $accent-color;
+    border-radius: 100px;
+    width: 10rem;
+  }
+  
+  .primary.button{
+    background-color: $primary-color;
+    color:$secondary-color;
+      &:hover{
+        background-color: transparent;
+        border: 1px solid $primary-color;
+        color: $primary-color;
+      }
+  }
+
+  .secondary.button{
+        background-color: transparent;
+        border: 1px solid $primary-color;
+        color: $primary-color;
+    &:hover{
+        background-color: $primary-color;
+        color:$secondary-color;
+    }
+  }
+  
+  .mb.icon{
+    width: 20px;
+    aspect-ratio: 1/1;
+  }
+  
+  .icon{
+    width: 24px;
+    aspect-ratio: 1/1;
+  }
+  
+  .text-icon{
+    width: 15px;
+    aspect-ratio: 1/1;
+  }
+  

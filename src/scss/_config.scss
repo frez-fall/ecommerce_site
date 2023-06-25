@@ -1,0 +1,75 @@
+@font-face {
+    font-family: Argue DEMO;
+    src: url("./fonts/Argue\ DEMO.otf") format('otf');
+}
+@font-face {
+    font-family: Poppins Regular;
+    src: url("./fonts/Poppins-Regular.ttf") format("ttf");
+}
+
+@font-face {
+    font-family: Poppins Medium;
+    src: url("./fonts/Poppins-Medium.ttf") format("ttf");
+}
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+$primary-color: #221F17;
+$secondary-color:#FCFCFC;
+$accent-color: #E5DDDD;
+
+$desktop-margin: 0 70px;
+$mobile-margin: 0 16px;
+
+$breakpoints:(
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xlg: 1200px,
+    xxlg:1440px
+);
+
+$fontsizes: (
+    desktop: (
+        h1: 3.75em,
+        h2: 2.5em,
+        h3: 1.875em,
+        h4: 1.5625em,
+        h5: 1.25em,
+        h6: 1.125em,
+        paragraph: 1.125em,
+        secondary-text: 1em,
+        input-text: .875em
+    ),
+    mobile: (
+        h1: 3rem,
+        h2: 2em,
+        h3: 1.5em,
+        h4: 1.125em,
+        paragraph: 1rem,
+        secondary-text: .875rem,
+        input-text: .875rem
+    )
+
+);
+
+@function font-size($deviceType, $textType){
+    @return  map-get(map-get($fontsizes, $deviceType), $textType)
+};
+
+
+
+@mixin flexbox($direction, $justify, $align){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+

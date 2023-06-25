@@ -1,0 +1,257 @@
+@font-face {
+  font-family: Argue DEMO;
+  src: url("./fonts/Argue DEMO.otf") format("otf");
+}
+@font-face {
+  font-family: Poppins Regular;
+  src: url("./fonts/Poppins-Regular.ttf") format("ttf");
+}
+@font-face {
+  font-family: Poppins Medium;
+  src: url("./fonts/Poppins-Medium.ttf") format("ttf");
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: Argue DEMO;
+  src: url("./fonts/Argue DEMO.otf") format("otf");
+}
+@font-face {
+  font-family: Poppins Regular;
+  src: url("./fonts/Poppins-Regular.ttf") format("ttf");
+}
+@font-face {
+  font-family: Poppins Medium;
+  src: url("./fonts/Poppins-Medium.ttf") format("ttf");
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  top: 0;
+  margin: 0;
+  width: 100vw;
+  position: fixed;
+}
+
+.nav-container {
+  background-color: #FCFCFC;
+  box-shadow: 0px 4px 4px rgba(33, 31, 23, 0.2);
+  position: relative;
+  z-index: 2;
+  overflow: auto;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  margin: 0 16px;
+  padding: 0;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+@media screen and (min-width: 768px) {
+  .navbar {
+    margin: 0 70px;
+  }
+}
+
+.nav-section {
+  flex: 1;
+}
+
+.navbar-logo {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.navbar-logo img {
+  width: 100px;
+  height: auto;
+}
+
+.nav-section.icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: stretch;
+  flex-grow: 1;
+  gap: 1rem;
+}
+
+.mb-hide {
+  display: none;
+}
+@media screen and (min-width: 992px) {
+  .mb-hide {
+    display: block;
+  }
+}
+
+body {
+  overflow-x: hidden;
+  background-color: #FCFCFC !important;
+}
+
+ul {
+  padding: 0 !important;
+}
+
+h2, h3, h5, h6, .secondary-text, p {
+  color: #221F17;
+}
+
+h1, h2 {
+  font-family: Argue DEMO;
+}
+
+h1 {
+  font-size: 3rem;
+}
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 3.75em;
+  }
+}
+
+h2 {
+  font-size: 2em;
+}
+@media screen and (min-width: 768px) {
+  h2 {
+    font-size: 2.5em;
+  }
+}
+
+h3, h4, p, .secondary-text {
+  font-family: Poppins Regular;
+}
+
+h3, h4, h6, .button {
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+@media screen and (min-width: 768px) {
+  h3 {
+    font-size: 1.875em;
+  }
+}
+
+h4 {
+  font-size: 1.125em;
+}
+@media screen and (min-width: 768px) {
+  h4 {
+    font-size: 1.5625em;
+  }
+}
+
+h5, h6, .button {
+  font-family: Poppins Medium;
+}
+
+h5 {
+  font-size: 1.125em;
+  margin: 0 !important;
+}
+@media screen and (min-width: 768px) {
+  h5 {
+    font-size: 1.25em;
+  }
+}
+
+h6 {
+  font-size: 3rem;
+  padding: 0;
+  line-height: auto;
+}
+@media screen and (min-width: 768px) {
+  h6 {
+    font-size: 1.125em;
+  }
+}
+
+p:not([class*=secondary-text]) {
+  font-size: 1rem;
+}
+@media screen and (min-width: 768px) {
+  p:not([class*=secondary-text]) {
+    font-size: 1.125em;
+  }
+}
+
+.secondary-text {
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+  .secondary-text {
+    font-size: 1em;
+  }
+}
+
+.button {
+  padding: 8px;
+  letter-spacing: 0.1em;
+  font-size: 0.875rem;
+  border: none;
+  border-radius: 5px;
+}
+@media screen and (min-width: 768px) {
+  .button {
+    font-size: 0.875em;
+  }
+}
+
+.button.links {
+  background-color: #E5DDDD;
+  border-radius: 100px;
+  width: 10rem;
+}
+
+.primary.button {
+  background-color: #221F17;
+  color: #FCFCFC;
+}
+.primary.button:hover {
+  background-color: transparent;
+  border: 1px solid #221F17;
+  color: #221F17;
+}
+
+.secondary.button {
+  background-color: transparent;
+  border: 1px solid #221F17;
+  color: #221F17;
+}
+.secondary.button:hover {
+  background-color: #221F17;
+  color: #FCFCFC;
+}
+
+.mb.icon {
+  width: 20px;
+  aspect-ratio: 1/1;
+}
+
+.icon {
+  width: 24px;
+  aspect-ratio: 1/1;
+}
+
+.text-icon {
+  width: 15px;
+  aspect-ratio: 1/1;
+}/*# sourceMappingURL=main.css.map */
