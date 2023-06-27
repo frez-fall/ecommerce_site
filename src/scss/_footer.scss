@@ -12,14 +12,18 @@
 .row.newsletter{
     @include flexbox(row, center, center);
     margin:60px 16px;
-    gap:0;
+    gap:1em;
     @media screen and (min-width: map-get($breakpoints, md)){
         justify-content: space-between;
         margin: 60px 70px;
     }
+    @media screen and (min-width: map-get($breakpoints, lg)){
+        justify-content: space-between;
+        gap:0;
+    }
     .col-lg-6{
-        justify-content: center;
         text-align: center;
+        padding:0;
         @media screen and (min-width: map-get($breakpoints, lg)){
             justify-content: center;
             text-align: left;
@@ -41,22 +45,25 @@
 .newsletter-form{
     @include flexbox(row, space-between, center);
     width: 100%;
-    @media screen and (min-width:map-get($breakpoints, lg)) {
+    @media screen and (min-width:map-get($breakpoints, md)) {
         width:75%;
     }    
     input[type="email"]{
         font-size: font-size(mobile, input-text);
         color: $secondary-color;
         font-family: Poppins Regular;
-        padding:8px 20px;
+        padding:8px;
         width: 65%;
         background-color: transparent;
         border: solid 1px $secondary-color;
         border-right:none;
         border-radius: 5px 0 0 5px;
+        @media screen and (min-width:(map-get($breakpoints, md))) {
+            padding:8px 20px;
+        }
     }
     .primary.button{
-        width: 45%;
+        width: 40%;
         border: solid 1px $secondary-color;
         background-color: $secondary-color;
         border-radius: 0 5px 5px 0;
@@ -78,7 +85,7 @@
     .row{
          .col-md-4{
         @include flexbox(column, flex-start, center);
-        gap:1.25rem;
+        gap:1rem;
         flex:1;
         margin-bottom:60px;
 
@@ -99,7 +106,10 @@
 }
 
 .logo{
-    width: 200px;
+    width: 120px;
+    @media screen and (min-width: map-get($breakpoints, lg)) {
+        width: 200px;
+    }
 }
 
 .social-icons{

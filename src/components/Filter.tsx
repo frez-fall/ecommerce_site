@@ -4,42 +4,31 @@ import {
 } from "../utils/product-interface";
 import close from "../assets/icons/Delete.svg";
 import "../scss/_filter.scss";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 
 interface FilterProps {
-  toggleModal: (shouldOpen: boolean) => void;
+  closeModal: (modalName: string) => void;
+  handleOutsideClick: (
+    ref: React.RefObject<HTMLDivElement>,
+    closeModal: (modalName: string) => void,
+    modalName: string
+  ) => void;
   onFilterSelect: (filter: string, isSelected: HTMLInputElement) => void;
   onApplyFilters: () => void;
   onClearFilters: () => void;
   productCategories: ProductCategoriesContainer[];
 }
 
-const useOutsideClick = (
-  ref: React.RefObject<HTMLDivElement>,
-  toggleModal: (shouldOpen: boolean) => void
-): void => {
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (ref.current && !ref.current.contains(event.target as Node)) {
-        toggleModal(false);
-      }
-    };
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [ref, toggleModal]);
-};
-
 const Filter: React.FC<FilterProps> = ({
-  toggleModal,
+  closeModal,
+  handleOutsideClick,
   onApplyFilters,
   onFilterSelect,
   onClearFilters,
   productCategories,
 }) => {
-  const modelRef = useRef<HTMLDivElement>(null);
-  useOutsideClick(modelRef, toggleModal);
+  const modalRef = useRef<HTMLDivElement>(null);
+  handleOutsideClick(modalRef, closeModal, "filterModal");
 
   const passFilter = (event: React.ChangeEvent<HTMLInputElement>) => {
     const filter = event.target.id;
@@ -52,7 +41,7 @@ const Filter: React.FC<FilterProps> = ({
   };
 
   const renderProductList = (objects: ProductCategoriesContainer[]) => {
-    const filteredObjects = objects.filter((item) => item.title !== "Explore");
+    const filteredObjects = objects.filter((item) => item.title);
     return (
       <>
         {filteredObjects.map((item: any, title = item.title
@@ -88,36 +77,36 @@ const Filter: React.FC<FilterProps> = ({
   };
 
   return (
-    <div className="filter-container" ref={modelRef}>
+    <div className="filter-container" ref={modalRef}>
       <div className="heading">
         <img
           className="icon"
           src={close}
           alt="close button"
-          onClick={() => toggleModal(false)}
+          onClick={() => closeModal("filterModal")}
         />
         <p>Filter</p>
         <h3>Filter By</h3>
       </div>
       <form className="filter-form">
         {renderProductList(productCategories)}
-        <div className="filter-buttons">
-          <button
-            type="reset"
-            className="secondary button"
-            onClick={onClearFilters}
-          >
-            Clear All
-          </button>
-          <button
-            type="button"
-            className="primary button"
-            onClick={handleApplyClick}
-          >
-            Apply
-          </button>
-        </div>
       </form>
+      <div className="filter-buttons">
+        <button
+          type="reset"
+          className="secondary button"
+          onClick={onClearFilters}
+        >
+          Clear All
+        </button>
+        <button
+          type="button"
+          className="primary button"
+          onClick={handleApplyClick}
+        >
+          Apply
+        </button>
+      </div>
     </div>
   );
 };

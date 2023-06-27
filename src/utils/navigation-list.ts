@@ -20,11 +20,8 @@ export const navigationItems = [
     value: "Products",
     icon: "/src/assets/icons/Products.svg",
     selected: false,
-    onMouseEnter: function () {
-      let productList: Element | null = document.querySelector(".product-menu");
-      productList !== null ? productList.classList.add("active") : "";
-    },
     id: "products",
+    hasModal: true
   },
   {
     value: "Skin Quiz",

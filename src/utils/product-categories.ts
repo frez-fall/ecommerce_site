@@ -1,6 +1,7 @@
 export const productCategories = [
   {
-    title: "Explore",
+    title: null,
+    id: "explore",
     list: [
       {
         value: "All Products",
@@ -22,19 +23,18 @@ export const productCategories = [
   },
   {
     title: "Shop By Category",
+    id: "category",
     list: [
       { value: "Face Wash", name: "category", id: "face-wash" },
       { value: "Serum", name: "category", id: "serum" },
       {
         value: "Moisturizer",
-        checked: false,
         name: "category",
         id: "moisturizer",
       },
       { value: "Toner", name: "category", id: "toner" },
       {
         value: "Spot Treatment",
-        checked: false,
         name: "category",
         id: "spot-treatment",
       },
@@ -43,31 +43,28 @@ export const productCategories = [
   },
   {
     title: "Shop By Skin Type",
+    id: "skintype",
     list: [
       { value: "Aging", name: "skin-type", id: "aging" },
       {
         value: "Dry & Dehydrated",
-        checked: false,
         name: "skin-type",
         id: "dry-dehydrated",
       },
       { value: "Oily", name: "skin-type", id: "oily" },
       {
         value: "Acne Prone",
-        checked: false,
         name: "skin-type",
         id: "acne-prone",
       },
       { value: "Normal", name: "skin-type", id: "normal" },
       {
         value: "Combination",
-        checked: false,
         name: "skin-type",
         id: "combination",
       },
       {
         value: "Sensitive",
-        checked: false,
         name: "skin-type",
         id: "sensitive",
       },

@@ -4,7 +4,7 @@ hr{
   margin: 0 !important;
 }
 
-.product-menu{
+.product-menu-container{
   display: none;
   height: fit-content;
   position: fixed;
@@ -14,7 +14,6 @@ hr{
     height: auto;
     position: relative;
     z-index: 1;
-    overflow-y: auto;
   }
   &.active{
       background-color:$secondary-color;
@@ -29,12 +28,18 @@ hr{
   }
 }
 
-.product-menu .row{
+.product-menu{
   background-color: $secondary-color;
-  margin:  0;
   @media screen and (min-width: map-get($breakpoints, sm)) {
-    width: 50%;
+    width: 50vw;
   }
+  @media screen and (min-width: map-get($breakpoints, lg)) {
+    width: auto;
+  }
+}
+
+.product-menu .row{
+  margin:  0;
   @media screen and (min-width: map-get($breakpoints, lg)){
     @include flexbox(row, space-between, flex-start);
     width: auto;
@@ -43,11 +48,13 @@ hr{
   .menu{
     @include flexbox(column, flex-start, stretch);
     overflow-y: scroll;
-    margin: 80px 0 20px 0;
+    margin-top: 80px;
+    padding: 0px 16px 80px 16px;
     height: 100vh;
     @media screen and (min-width: map-get($breakpoints, lg)) {
       @include flexbox(row, space-between, stretch);
-      overflow-y: hidden;
+      overflow:hidden;
+      padding: 0;
       margin: 0;
       height: auto;
     }
@@ -73,7 +80,7 @@ hr{
     margin:0;
   }
   @media screen and (min-width: map-get($breakpoints, sm)) {
-      width: 50%;
+      width: 50vw;
   }
   @media screen and (min-width: map-get($breakpoints, lg)) {
       display: none;
@@ -90,6 +97,9 @@ hr{
   h6{
     font-size: font-size(mobile, secondary-text);
     margin: 0;
+    @media screen and (min-width: map-get($breakpoints, md)) {
+      font-size:font-size(desktop, secondary-text);
+    }
     @media screen and (min-width: map-get($breakpoints, lg)){
       font-size: font-size(desktop, h6)
     }
@@ -138,8 +148,9 @@ hr{
 }
 
 .list-container.active{
+  height: fit-content;
   .menu-heading .expand{
-    transform: rotate(-45deg);
+    transform: rotate(90deg);
   }
   .menu-list li{
     display: block;

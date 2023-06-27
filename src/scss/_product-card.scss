@@ -1,7 +1,8 @@
 @import './config.scss';
 
 .product-card{
-    @include flexbox(column, flex-start, flex-start);
+    @include flexbox(column, flex-start, center);
+    cursor:pointer;
     aspect-ratio: 3/4;
     border: 1px solid $accent-color;
     border-radius: 10px;
@@ -22,9 +23,9 @@
 }
 
 .card-details{
-    @include flexbox(column, space-between, flex-start);
+    @include flexbox(column, space-between, stretch);
     width: 100%;
-    padding: 0 12px;
+    padding: 20px 12px;
     @media screen and (min-width: map-get($breakpoints, sm)) {
         flex-direction: row;
     }

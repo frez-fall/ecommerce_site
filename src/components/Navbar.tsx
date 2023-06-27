@@ -2,20 +2,37 @@ import "../scss/_navbar.scss";
 import ProductMenu from "./ProductMenu";
 import Menu from "./Menu";
 
-function Navbar() {
-  let closeDropDown = function () {
-    let productDropDown: Element | null =
-      document.querySelector(".product-menu");
-    productDropDown !== null ? productDropDown.classList.remove("active") : "";
-  };
+interface NavbarProps {
+  openModal: (modalName: string) => void;
+  closeModal: (modalName: string) => void;
+  handleOutsideClick: (
+    ref: React.RefObject<HTMLDivElement>,
+    closeModal: (modalName: string) => void,
+    modalName: string
+  ) => void;
+  modalState: { [key: string]: boolean };
+}
 
+const Navbar: React.FC<NavbarProps> = ({
+  openModal,
+  closeModal,
+  handleOutsideClick,
+  modalState,
+}) => {
   return (
     <header>
-      <div className="nav-container" onMouseLeave={closeDropDown}>
+      <div
+        className="nav-container"
+        onMouseLeave={() => closeModal("productModal")}
+      >
         <nav className="navbar">
           <div className="container-fluid">
             <div className="nav-section mb-hide" id="navbarSupportedContent">
-              <Menu />
+              <Menu
+                openModal={openModal}
+                closeModal={closeModal}
+                modalState={modalState}
+              />
             </div>
             <a href="#" className="navbar-logo">
               <img
@@ -42,10 +59,16 @@ function Navbar() {
             </div>
           </div>
         </nav>
-        {window.innerWidth >= 992 ? <ProductMenu /> : null}
+        {window.innerWidth >= 992 && (
+          <ProductMenu
+            closeModal={closeModal}
+            handleOutsideClick={handleOutsideClick}
+            modalState={modalState}
+          />
+        )}
       </div>
     </header>
   );
-}
+};
 
 export default Navbar;

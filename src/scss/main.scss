@@ -6,6 +6,10 @@ body{
     background-color: $secondary-color !important;
   }
   
+  body.modal-open{
+    overflow-y: hidden;
+  }
+  
   ul{
     padding:0 !important;
   }
@@ -77,6 +81,7 @@ body{
   }
   
   p:not([class*="secondary-text"]){
+    margin: 0;
     font-size:font-size(mobile, paragraph);
     @media screen and (min-width: map-get($breakpoints, md)) {
         font-size:font-size(desktop, paragraph);
@@ -86,6 +91,7 @@ body{
   .secondary-text{
     font-size:font-size(mobile, secondary-text);
     cursor: pointer;
+    margin: 0;
     @media screen and (min-width: map-get($breakpoints, md)) {
         font-size:font-size(desktop, secondary-text);
     }
@@ -141,5 +147,6 @@ body{
   .text-icon{
     width: 15px;
     aspect-ratio: 1/1;
+    margin-right: 0.5em;
   }
   

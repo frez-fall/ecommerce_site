@@ -1,16 +1,27 @@
-import { useState, useEffect } from "react";
-import Filter from "./Filter";
 import "../scss/_product-list.scss";
+import Filter from "./Filter";
 import ProductCard from "./ProductCard";
+import { useState } from "react";
 import { productCategories } from "../utils/product-categories";
 import { products, images } from "../utils/product-data.json";
 
-function ProductList() {
-  const [isModalOpen, setIsModeOpen] = useState(false);
-  const toggleModal = (shouldOpen: boolean) => {
-    setIsModeOpen(shouldOpen);
-  };
+interface ProductListProps {
+  openModal: (modalName: string) => void;
+  closeModal: (modalName: string) => void;
+  handleOutsideClick: (
+    ref: React.RefObject<HTMLDivElement>,
+    closeModal: (modalName: string) => void,
+    modalName: string
+  ) => void;
+  modalState: { [key: string]: boolean };
+}
 
+const ProductList: React.FC<ProductListProps> = ({
+  openModal,
+  closeModal,
+  handleOutsideClick,
+  modalState,
+}) => {
   const [selectedFilters, setSelectedFilters] = useState<string[]>([]);
   const [appliedFilters, setAppliedFilters] = useState<string[]>([]);
   const [clearFilters, setClearFilters] = useState(false);
@@ -29,12 +40,8 @@ function ProductList() {
 
   const handleClearFilters = () => {
     setSelectedFilters([]);
-    setClearFilters(true);
+    setClearFilters(!clearFilters);
   };
-
-  useEffect(() => {
-    setClearFilters(false);
-  }, [clearFilters == true]);
 
   const filteredProducts = products.filter((product) => {
     if (window.innerWidth < 992) {
@@ -56,9 +63,10 @@ function ProductList() {
   return (
     <div className="product-page-container">
       <div className="row">
-        <aside className={`col-lg-3${isModalOpen ? " active" : ""}`}>
+        <aside className={`col-lg-3 ${modalState.filterModal ? "active" : ""}`}>
           <Filter
-            toggleModal={toggleModal}
+            closeModal={closeModal}
+            handleOutsideClick={handleOutsideClick}
             onFilterSelect={handleFilterSelect}
             onApplyFilters={handleApplyFilters}
             onClearFilters={handleClearFilters}
@@ -70,7 +78,7 @@ function ProductList() {
             <h2>Products</h2>
             <button
               className="button links filter-btn"
-              onClick={() => toggleModal(true)}
+              onClick={() => openModal("filterModal")}
             >
               <img className="text-icon" src="src/assets/icons/Filter.svg" />
               Filter
@@ -93,6 +101,6 @@ function ProductList() {
       </div>
     </div>
   );
-}
+};
 
 export default ProductList;

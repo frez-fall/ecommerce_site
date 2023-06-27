@@ -102,6 +102,10 @@ body {
   background-color: #FCFCFC !important;
 }
 
+body.modal-open {
+  overflow-y: hidden;
+}
+
 ul {
   padding: 0 !important;
 }
@@ -115,7 +119,7 @@ h1, h2 {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 3em;
 }
 @media screen and (min-width: 768px) {
   h1 {
@@ -173,7 +177,7 @@ h5 {
 }
 
 h6 {
-  font-size: 3rem;
+  font-size: 3em;
   padding: 0;
   line-height: auto;
 }
@@ -184,7 +188,8 @@ h6 {
 }
 
 p:not([class*=secondary-text]) {
-  font-size: 1rem;
+  margin: 0;
+  font-size: 1em;
 }
 @media screen and (min-width: 768px) {
   p:not([class*=secondary-text]) {
@@ -193,8 +198,9 @@ p:not([class*=secondary-text]) {
 }
 
 .secondary-text {
-  font-size: 0.875rem;
+  font-size: 0.875em;
   cursor: pointer;
+  margin: 0;
 }
 @media screen and (min-width: 768px) {
   .secondary-text {
@@ -205,7 +211,7 @@ p:not([class*=secondary-text]) {
 .button {
   padding: 8px;
   letter-spacing: 0.1em;
-  font-size: 0.875rem;
+  font-size: 0.875em;
   border: none;
   border-radius: 5px;
 }
@@ -254,4 +260,5 @@ p:not([class*=secondary-text]) {
 .text-icon {
   width: 15px;
   aspect-ratio: 1/1;
+  margin-right: 0.5em;
 }/*# sourceMappingURL=main.css.map */

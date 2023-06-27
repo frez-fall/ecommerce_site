@@ -6,6 +6,7 @@ export interface ProductCategories {
 
 export type ProductCategoriesContainer = {
   title: string | null;
+  id: string;
   list: ProductCategories[];
 };
 

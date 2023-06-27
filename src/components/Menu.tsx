@@ -8,7 +8,13 @@ import "../scss/_menu.scss";
 
 import arrow from "../assets/icons/Arrow.svg";
 
-const Menu = () => {
+interface MenuProps {
+  openModal: (modalName: string) => void;
+  closeModal: (modalName: string) => void;
+  modalState: { [key: string]: boolean };
+}
+
+const Menu: React.FC<MenuProps> = ({ openModal, closeModal, modalState }) => {
   const renderNavList = (objects: Navigation[] | NavigationWithMethod[]) => {
     let menuObjects =
       window.innerWidth < 992
@@ -20,7 +26,14 @@ const Menu = () => {
           <li
             className="nav-item"
             key={item.id}
-            onMouseEnter={item.onMouseEnter || null}
+            onMouseEnter={
+              window.innerWidth >= 920 && item.hasModal
+                ? () => openModal("productModal")
+                : undefined
+            }
+            onClick={
+              item.hasModal ? () => openModal("productModal") : undefined
+            }
           >
             {item.value === "Products" ? (
               <img
