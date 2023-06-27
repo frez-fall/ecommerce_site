@@ -23,7 +23,7 @@ This repository contains the ongoing frontend development for an e-commerce webs
 
 ### Live Demo
 
-## Current progress: 
+#### Current progress: 
 
 https://github.com/frez-fall/ecommerce_site/assets/115141272/69480a39-9427-444b-9360-d111165272b6
 
