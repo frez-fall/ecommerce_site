@@ -2,7 +2,6 @@
 
 This repository contains the ongoing frontend development for an e-commerce website project for a concept brand called Fleur. The goal is to create a modern and user-friendly online shopping experience based on the design [here.](https://www.behance.net/gallery/171132089/Fleur-Skincare-Website)
 
-![image](https://github.com/frez-fall/ecommerce_site/assets/115141272/65475ace-41f9-4913-b259-e6240021e192)
 
 ### Current Features include:
 
@@ -21,6 +20,13 @@ This repository contains the ongoing frontend development for an e-commerce webs
 
 - Node.js
 - Vite
+
+### Live Demo
+
+
+https://github.com/frez-fall/ecommerce_site/assets/115141272/69480a39-9427-444b-9360-d111165272b6
+
+
 
 ### Continued development
 
